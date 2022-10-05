@@ -8,10 +8,8 @@
     <b>Previous Cards : </b>
     <div class="d-flex justify-content-center">
         @foreach($previous_cards as $prev_card)
-            <div class="card m-1">
-                <div class="card-body">
-                    {{ $prev_card }}
-                </div>
+            <div class="p-2">
+                <img src="{{ asset('/images/' . $prev_card . '.png') }}" style="height: 7em;"/>
             </div>
         @endforeach
     </div>
@@ -19,11 +17,7 @@
     <br>
 
     <h2>Your Card</h2>
-    <div class="card">
-        <div class="card-body">
-            <h1>{{ $card }}</h1>
-        </div>
-    </div>
+    <img src="{{ asset('/images/' . $card . '.png') }}" class="w-50"/>
 
     @if($previous_guess)
         <br>
