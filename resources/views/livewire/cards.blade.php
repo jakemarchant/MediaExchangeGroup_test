@@ -16,13 +16,14 @@
 
     <br>
 
-    <h2>Your Card</h2>
-    <img src="{{ asset('/images/' . $card . '.png') }}" class="w-50"/>
+    <div>
+        <h2>Your Card</h2>
+        <img src="{{ asset('/images/' . $card . '.png') }}" class="w-50"/>
+    </div>
 
     @if($previous_guess)
-        <br>
         Previous guess:
-        {{ ucwords($previous_guess) }}
+        {{ ucfirst($previous_guess) }}
     @endif
 
     <hr>

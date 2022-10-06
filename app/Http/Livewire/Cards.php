@@ -97,7 +97,7 @@ class Cards extends Component
     public function play($dir)
     {
         $this->guesses++;
-        $this->prev_guess = $dir == '>' ? 'higher' : 'lower';
+        $this->previous_guess = $dir == '>' ? 'higher' : 'lower';
 
         $this_card = $this->getCardValue($this->card);
         $next_card = $this->getCardValue($this->card_deck[0]);
